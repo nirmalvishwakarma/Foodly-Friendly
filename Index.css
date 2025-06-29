@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+body{
+    height: fit-content;
+    min-width: min-content;
+}
+.header {
+    min-height: max-content;
+    min-width: fit-content;
+}
+
+.food-top {
+    min-height: 80px;
+    max-height: 50px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 10px;
+    align-items: center;
+    background-color: #fda172;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo {
+    min-height: auto;
+    max-width: 100%;
+}
+
+.nav{
+    align-self: center;
+}
+
+.items {
+    display: flex;
+    gap: 25px;
+}
+
+.food-items {
+    display: inline;
+    list-style-type: none;
+    font-size: 1rem;
+}
+
+.food-items a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.food-items a:hover {
+    color: #FF5E0E;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.line {
+    min-height: fit-content;
+    display: flex;
+    gap: 35px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    font-size: clamp(1rem, 1.3rem, 1rem);
+    gap: 15px;
+    cursor: pointer;
+}
+.food-middle {
+    height: 50vh;
+    max-width: 100%;
+    background: #fda172;
+    background: linear-gradient(160deg, #f08854 50%, rgba(217, 154, 134, 1) 100%);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.food-middle-left {
+    height: auto;
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.food-middle-center {
+    height: auto;
+    min-height: 50vh;
+    width: max-content;
+    width: 33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(2.8rem, 2rem, 1.2rem);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    gap: 50px;
+}
+
+.food-middle-right {
+    height: auto;
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.food-middle-center input {
+    height: 40px;
+    width: 450px;
+    border: none;
+    border-radius: 25px;
+    font-size: clamp(0.8rem, 0.7rem, 0.45em);
+    padding-left: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+.food-middle-center input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #ccc;
+}
+.food-middle-center input:hover{
+    border: 1px solid orange;
+}
+
+.content{
+    height: auto;
+    width: 1320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.burger{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px;
+}
+.burger-text{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1.3rem, 1.1rem, 0.9rem);
+}
+.burger-image{
+    height: auto;
+    max-width: 100%;
+}
+hr{
+    height: 2px;
+    width: 100%;
+    background-color: #fda172;
+    border: none;
+}
+.phonemockup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px;
+}
+.phonemockup-text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1.3rem, 1.1rem, 0.9rem);
+}
+
+.app{
+    height: 50px;
+    width: 200px;
+    background-color: rgb(247, 92, 35);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1.3rem, 1.1rem, 0.9rem);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.app a{
+    text-decoration: none;
+    color: black;
+}
+.reach-out{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px;
+}
+.partners{
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;    
+}
+.partners img{
+    object-fit: contain;
+}
+.with-us img{
+    object-fit: contain;
+}
+.hungry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px;
+}
+.hungry{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1.5rem, 1.1rem, 0.9rem);
+}
+.footer{
+    height: auto;
+    min-height: 100%;
+    background-color: #fda172;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 60px;
+}
+.footer-info, .connect-with-us{
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1rem, 0.9rem, 0.7rem);
+    color: black;
+    gap: 25px;
+}
+.connect-with-us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.connect-with-us-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+svg{
+    width: 30px;
+    height: 30px;
+    fill: black;
+    cursor: pointer;
+}
+svg:hover{
+    fill: #FF5E0E;
+}
+@media (max-width: 1300px){
+    .food-top{
+        height: auto;
+        min-height: 100px;
+        width: 100%;
+    }
+
+}
+@media (max-width: 1200px) {
+
+    .items {
+        gap: 15px;
+    }
+    .burger{
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        width: 1080px;
+    }
+    .burger-text{
+        justify-self: center;
+        align-self: center;
+    }
+    .phonemockup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .phonemockup-text{
+        justify-content: center;
+        align-items: center;
+    }
+    .app{
+        height: 60px;
+        width: 100%;
+    }
+}
+@media (max-width: 1080px) {
+    .content{
+        width: 1080px;
+        margin: auto;
+    }
+    .nav {
+        display: none;
+    }
+    .burger{
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        width: 1080px;
+    }
+     .partners{
+        display: flex;
+        gap: 45px;
+    }
+    .partners img {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .partners-text{
+        text-align: center;
+    }
+    .with-us-text{
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .food-top {
+        min-height: 100px;
+        max-height: 100px;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .list {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .food-middle {
+        height: 500px;
+        min-height: 250px;
+        max-width: 100%;
+    }
+
+
+    .food-middle-right .susi-img{   
+        min-height: auto;
+        height: 250px;
+        width: 100%;
+        float: left;
+    }
+
+    .food-middle-center {
+        height: auto;
+        min-height: 250px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: clamp(2.5rem, 1.7rem, 0.8rem);
+        color: black;
+        gap: 20px;
+        z-index: 8;
+    }
+
+    .food-middle-center input{
+        border: 1px solid orange;
+    }
+    .burger{
+        display: flex;
+        gap: 50px;
+        justify-items: center;
+        align-items: center;
+    }
+    .burger-text p{
+        text-align: center;
+    }
+    .reach-out{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .partners{
+        display: flex;
+        gap: 45px;
+    }
+    .partners img {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+    .with-us img{
+        padding-left: 320px;
+    }
+    .with-us {
+        gap: 45px;
+        justify-content: center;
+        align-self: center;
+    }
+    .partners-text, .with-us-text {
+        text-align: center;
+        font-size: clamp(1.3rem, 1.1rem, 0.9rem);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
