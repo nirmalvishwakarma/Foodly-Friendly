@@ -302,6 +302,10 @@ svg{
         display: flex;
         gap: 20px;
     }
+    .food-middle-left img, .food-middle-right img{
+        min-height: fit-content;
+        max-width: 350px;
+    }
     .food-middle-center{
         display: inline;
         margin-top: 600px;
