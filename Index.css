@@ -5,21 +5,16 @@
 
 .container {
     height: auto;
-    width: 100%;
+    max-width: 100%;
     font-family: sans-serif;
-}
-
-body{
-    height: fit-content;
-    min-width: min-content;
 }
 .header {
     min-height: max-content;
-    min-width: fit-content;
+    max-width: 100%;
 }
 
 .food-top {
-    min-height: 80px;
+    min-height: 100px;
     max-height: 50px;
     max-width: 100%;
     display: flex;
@@ -54,11 +49,15 @@ body{
     color: black;
     text-decoration: none;
     font-weight: bold;
+    transition: hover 2s ease;
 }
 
 .food-items a:hover {
     color: #FF5E0E;
     font-weight: bold;
+    position: relative;
+    top: -3px;
+
 }
 
 a {
@@ -85,12 +84,12 @@ a {
     background: linear-gradient(160deg, #f08854 50%, rgba(217, 154, 134, 1) 100%);
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    justify-content: space-between;
 }
 
 .food-middle-left {
     height: auto;
-    width: 33%;
+    max-width: 33%;
     display: flex;
     justify-content: flex-start;
 }
@@ -98,14 +97,14 @@ a {
 .food-middle-center {
     height: auto;
     min-height: 50vh;
-    width: max-content;
+    max-width: max-content;
     width: 33%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: clamp(2.8rem, 2rem, 1.2rem);
+    font-size: clamp(1.5rem, 1rem, 0.8rem);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: black;
     gap: 50px;
@@ -113,14 +112,14 @@ a {
 
 .food-middle-right {
     height: auto;
-    width: 33%;
+    max-width: 33%;
     display: flex;
     justify-content: flex-end;
 }
 
 .food-middle-center input {
     height: 40px;
-    width: 450px;
+    max-width: 450px;
     border: none;
     border-radius: 25px;
     font-size: clamp(0.8rem, 0.7rem, 0.45em);
@@ -138,7 +137,7 @@ a {
 
 .content{
     height: auto;
-    width: 1320px;
+    max-width: 1320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,9 +153,9 @@ a {
     padding: 35px;
 }
 .burger-text{
-    text-align: center;
+    text-align: start;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: clamp(1.3rem, 1.1rem, 0.9rem);
+    font-size: clamp(1.2rem, 1.1rem, 0.9rem);
 }
 .burger-image{
     height: auto;
@@ -165,8 +164,7 @@ a {
 hr{
     height: 2px;
     width: 100%;
-    background-color: #fda172;
-    border: none;
+    background: #ccc;
 }
 .phonemockup{
     display: flex;
@@ -183,7 +181,7 @@ hr{
 
 .app{
     height: 50px;
-    width: 200px;
+    max-width: 300px;
     background-color: rgb(247, 92, 35);
     border-radius: 5px;
     display: flex;
@@ -231,23 +229,45 @@ hr{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: clamp(1.5rem, 1.1rem, 0.9rem);
 }
+.btn{
+    height: 50px;
+    min-width: 250px;
+    background-color: rgb(247, 92, 35);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1.3rem, 1.1rem, 0.9rem);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn a{
+    color: white;
+}
+.get-btn{
+    min-height: auto;
+    max-width: 300px;
+}
 .footer{
     height: auto;
     min-height: 100%;
-    background-color: #fda172;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 20px;
-    gap: 60px;
 }
 .footer-info, .connect-with-us{
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: clamp(1rem, 0.9rem, 0.7rem);
+    font-size: clamp(12px, 10px, 6px);
     color: black;
+    display: flex;
+    flex-direction: column;
     gap: 25px;
+    cursor: pointer;
 }
 .connect-with-us{
     display: flex;
@@ -263,166 +283,77 @@ hr{
     gap: 35px;
 }
 svg{
-    width: 30px;
+    max-width: 30px;
     height: 30px;
     fill: black;
     cursor: pointer;
 }
-svg:hover{
-    fill: #FF5E0E;
+.instagram:hover{
+    fill: #d32599;
 }
-@media (max-width: 1300px){
-    .food-top{
-        height: auto;
-        min-height: 100px;
-        width: 100%;
-    }
-
+.facebook:hover{
+    fill: #009;
 }
-@media (max-width: 1200px) {
-
-    .items {
-        gap: 15px;
-    }
-    .burger{
-        display: flex;
-        gap: 50px;
-        flex-direction: column;
-        width: 1080px;
-    }
-    .burger-text{
-        justify-self: center;
-        align-self: center;
-    }
-    .phonemockup{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .phonemockup-text{
-        justify-content: center;
-        align-items: center;
-    }
-    .app{
-        height: 60px;
-        width: 100%;
-    }
-}
-@media (max-width: 1080px) {
-    .content{
-        width: 1080px;
-        margin: auto;
-    }
-    .nav {
+@media (max-width: 800px){
+    .nav{
         display: none;
     }
-    .burger{
+    .list{
         display: flex;
-        gap: 50px;
-        flex-direction: column;
-        width: 1080px;
-    }
-     .partners{
-        display: flex;
-        gap: 45px;
-    }
-    .partners img {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-    }
-    .partners-text{
-        text-align: center;
-    }
-    .with-us-text{
-        text-align: center;
-    }
-}
-
-@media (max-width: 800px) {
-    .food-top {
-        min-height: 100px;
-        max-height: 100px;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .list {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-    }
-
-    .food-middle {
-        height: 500px;
-        min-height: 250px;
-        max-width: 100%;
-    }
-
-
-    .food-middle-right .susi-img{   
-        min-height: auto;
-        height: 250px;
-        width: 100%;
-        float: left;
-    }
-
-    .food-middle-center {
-        height: auto;
-        min-height: 250px;
-        width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: clamp(2.5rem, 1.7rem, 0.8rem);
-        color: black;
         gap: 20px;
-        z-index: 8;
     }
-
-    .food-middle-center input{
-        border: 1px solid orange;
+    .food-middle-center{
+        display: inline;
+        margin-top: 600px;
+        min-height: fit-content;
     }
-    .burger{
-        display: flex;
-        gap: 50px;
-        justify-items: center;
-        align-items: center;
+    .search-btn{
+        padding: 20px;
     }
-    .burger-text p{
+    .search-btn input{
+        padding-left: 5px;
+        border: 1px solid black;
+    }
+    .content{
+        margin-top: 250px;
+    }
+    h1, p{
         text-align: center;
+        flex-wrap: wrap;
     }
-    .reach-out{
+    .burger, .phonemockup {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
-    .partners{
+    .phonemockup{
+        gap: 0;
+        flex-direction: column-reverse;
+    }
+    .burger-image img{
+        height: 320px;
+        width: 400px;
+    }
+    .phonemockup-text{
         display: flex;
-        gap: 45px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .partners img {
+    .reach-out, .with-us img{
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-self: center;
+        align-items: center;
     }
-    .with-us img{
-        padding-left: 320px;
+    .partners img, .with-us img{
+        left: 0;
+        right: 0;
+        margin: auto;
     }
-    .with-us {
-        gap: 45px;
-        justify-content: center;
-        align-self: center;
-    }
-    .partners-text, .with-us-text {
-        text-align: center;
-        font-size: clamp(1.3rem, 1.1rem, 0.9rem);
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    .footer-info, .connect-with-us{
+        gap: 5px;
+        font-size: 10px;
     }
 }
