@@ -268,7 +268,7 @@ hr{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    /* padding: 20px; */
+    margin: 15px;
 }
 .footer-info, .connect-with-us{
     font-weight: bold;
@@ -355,8 +355,8 @@ svg{
         flex-direction: column-reverse;
     }
     .burger-image img{
-        height: 320px;
-        width: 370px;
+        height: 250px;
+        width: 300px;
     }
     .phonemockup-text{
         display: flex;
@@ -365,8 +365,8 @@ svg{
         align-items: center;
     }
     .phonemockup-img img{
-        min-height: 350px;
-        max-width: 370px;
+        height: 250px;
+        width: 300px;
     }
     .reach-out, .with-us img{
         display: flex;
