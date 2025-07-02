@@ -5,7 +5,7 @@
 
 .container {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     font-family: sans-serif;
 }
 .header {
@@ -57,7 +57,12 @@
     font-weight: bold;
     position: relative;
     top: -3px;
-
+}
+.sign-in:hover {
+    color: #FF5E0E;
+    font-weight: bold;
+    position: relative;
+    top: -3px;
 }
 
 a {
@@ -78,9 +83,8 @@ a {
     cursor: pointer;
 }
 .food-middle {
-    height: 50vh;
+    height: 70vh;
     max-width: 100%;
-    background: #fda172;
     background: linear-gradient(160deg, #f08854 50%, rgba(217, 154, 134, 1) 100%);
     display: flex;
     flex-direction: row;
@@ -89,16 +93,13 @@ a {
 
 .food-middle-left {
     height: auto;
-    max-width: 33%;
+    max-width: fit-content;
     display: flex;
     justify-content: flex-start;
 }
 
 .food-middle-center {
-    height: auto;
-    min-height: 50vh;
-    max-width: max-content;
-    width: 33%;
+    max-width: fit-content;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -118,14 +119,14 @@ a {
 }
 
 .food-middle-center input {
-    height: 40px;
-    max-width: 450px;
+    min-height: 25px;
+    max-width: max-content;
     border: none;
     border-radius: 25px;
     font-size: clamp(0.8rem, 0.7rem, 0.45em);
-    padding-left: 10px;
     font-style: italic;
     font-weight: bold;
+    padding-left: 10px;
 }
 .food-middle-center input[type="text"]:focus {
     outline: none;
@@ -150,9 +151,10 @@ a {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 35px;
+    margin: 35px;
 }
 .burger-text{
+    margin: 10px;
     text-align: start;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: clamp(1.2rem, 1.1rem, 0.9rem);
@@ -167,21 +169,24 @@ hr{
     background: #ccc;
 }
 .phonemockup{
+    min-height: fit-content;
+    max-width: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 35px;
+    margin: 35px;
 }
 .phonemockup-text{
+    margin: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: clamp(1.3rem, 1.1rem, 0.9rem);
 }
 
 .app{
     height: 50px;
     max-width: 300px;
+    min-width: 250px;
     background-color: rgb(247, 92, 35);
     border-radius: 5px;
     display: flex;
@@ -189,14 +194,16 @@ hr{
     align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: clamp(1.3rem, 1.1rem, 0.9rem);
-    color: black;
+    color: white;
     font-weight: bold;
     cursor: pointer;
 }
-
 .app a{
     text-decoration: none;
-    color: black;
+    color: white;
+}
+.app:hover{
+    background-color: rgb(205, 72, 23);
 }
 .reach-out{
     display: flex;
@@ -204,7 +211,7 @@ hr{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 35px;
+    margin:35px;
 }
 .partners{
     max-width: fit-content;
@@ -223,7 +230,7 @@ hr{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 35px;
+    margin:35px;
 }
 .hungry{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -243,6 +250,9 @@ hr{
     font-weight: bold;
     cursor: pointer;
 }
+.btn:hover{
+    background-color: rgb(205, 72, 23);
+}
 .btn a{
     color: white;
 }
@@ -253,11 +263,12 @@ hr{
 .footer{
     height: auto;
     min-height: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-evenly;
+    /* padding: 20px; */
 }
 .footer-info, .connect-with-us{
     font-weight: bold;
@@ -266,7 +277,7 @@ hr{
     color: black;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     cursor: pointer;
 }
 .connect-with-us{
@@ -302,14 +313,22 @@ svg{
         display: flex;
         gap: 20px;
     }
+    .food-middle{
+        height: 40vh;
+        width: 100%;
+    }
     .food-middle-left img, .food-middle-right img{
-        min-height: fit-content;
-        max-width: 350px;
+        
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+        display: block;
     }
     .food-middle-center{
         display: inline;
-        margin-top: 600px;
+        margin-top: 400px;
         min-height: fit-content;
+        justify-self: center;
     }
     .search-btn{
         padding: 20px;
@@ -319,7 +338,7 @@ svg{
         border: 1px solid black;
     }
     .content{
-        margin-top: 250px;
+        margin-top: 350px;
     }
     h1, p{
         text-align: center;
@@ -337,13 +356,17 @@ svg{
     }
     .burger-image img{
         height: 320px;
-        width: 400px;
+        width: 370px;
     }
     .phonemockup-text{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .phonemockup-img img{
+        min-height: 350px;
+        max-width: 370px;
     }
     .reach-out, .with-us img{
         display: flex;
@@ -356,8 +379,15 @@ svg{
         right: 0;
         margin: auto;
     }
+    .footer{
+        margin-top: 20px;
+        justify-content: space-evenly;
+        
+    }
+    .footer-logo img{
+        height: 30px;
+    }
     .footer-info, .connect-with-us{
-        gap: 5px;
-        font-size: 10px;
+        font-size: 8px;
     }
 }
