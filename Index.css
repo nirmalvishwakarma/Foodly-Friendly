@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    overflow: hidden;
+    overflow: auto;
 }
 .container {
     height: auto;
